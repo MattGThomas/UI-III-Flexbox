@@ -63,16 +63,14 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 15px;
 }
 
-/* Copy and paste your work from yesterday here and start to refactor into flexbox */
 .container {
-	width: 880px;
-	/* TB LR */
-	margin: 0 auto;
-  }
-  
-  /* header */
-  
-  header nav {
+    width: 880px;
+    margin:0 auto;    
+}
+.container header {
+    padding:15px 0;
+}
+header nav {
 	display: inline-block;
 	width: 691px;
 	vertical-align: top;
@@ -87,7 +85,9 @@ h1, h2, h3, h4, h5 {
   }
   
   header nav a:hover {
-	text-decoration: underline;
+    text-decoration: underline;
+    background:black;
+    color:red;
   }
   
   header nav a:first-child {
@@ -101,89 +101,74 @@ h1, h2, h3, h4, h5 {
   header .logo {
 	margin-top: 25px;
   }
-  
-  /* cta */
-  
-  .cta .cta-text {
-	display: inline-block;
-	vertical-align: top;
-	font-size: 77px;
-	margin-top: 120px;
-	text-align: center;
-	padding: 0px 75px;
-  }
-  
-  .cta .cta-text button {
-	background: white;
-	vertical-align: top;
-	margin-top: 6px;
-	padding: 8px 44px;
-	font-size: 17px;
-	border: 1px solid black;
-	cursor: pointer;
-  }
-  
-  .cta .cta-text button:hover {
-	background: black;
-	color: white;
-  }
-  
-  .cta img {
-	display: inline-block;
-	margin-top: 69px;
-  }
-  
-  .main-content {
-	border-top: 1px solid black;
-	margin-top: 76px;
-	padding-top: 39px;
-  }
-  
-  .main-content .top-content {
-	padding: 0 10px;
-  }
-  
-  .main-content .top-content .text-content {
-	width: 410px;
-	display: inline-block;
-	margin-right: 34px;
-  }
-  
-  .main-content .top-content .text-content:last-child {
-	margin-right: 0;
-  }
-  
-  .main-content .middle-img {
-	margin-top: 45px;
-  }
-  
-  .main-content .bottom-content {
-	margin-top: 37px;
-	padding: 0 10px;
-  }
-  
-  .main-content .bottom-content .text-content {
-	width: 275px;
-	display: inline-block;
-	margin-right: 12px;
-  }
-  
-  .main-content .bottom-content .text-content:last-child {
-	margin-right: 0;
-  }
-  
-  .contact {
-	margin-top: 57px;
-	border-top: 1px solid black;
-	padding: 39px 10px 0;
-  }
-  
-  .contact p {
-	margin: 20px 0;
-  }
-  
-  footer {
-	margin: 32px 0;
-	text-align: center;
-	font-size: 14px;
-  }
+
+.upper-content {
+    border-bottom: 1px solid black;
+    margin: 10px 0;
+}
+
+.upper-content h1{
+    padding-top:10px;
+    margin-top:10px;
+    font-size: 20px;
+}
+.upper-content p{
+    padding: 5px 0 18px 0;
+    margin: 5px 0 18px 0;
+}
+.main-content .item{
+    width: 405px;
+    margin: 20px 0;
+    padding: 20px;
+    background: lightgray;
+    border: 1px solid black;
+}
+.main-content {
+    padding:10 auto;
+    margin: 0; 
+    /* width: 200px; */
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items:flex-start;
+    border-bottom: 2px solid black;
+}
+.main-content .item h2 {
+    padding:10px 0 5px;
+}
+.main-content .item button {
+    padding:10px 0 10px;
+    background: white;
+    font-size: 12px;
+    text-align: center;
+    width: 150px;
+    border: 1px solid black;
+    margin: 15px 0 5px;
+    border-radius:5px;
+}
+.bottom-content {
+    display: flex;
+    /* width: 350px; */
+    margin:0px;
+    justify-content: space-evenly;
+}
+.bottom-content-main {
+    display: inline;
+    /* width: 400px; */
+    text-align:left; 
+    /* margin:auto; */
+    padding: 20px 0;
+    padding-right: 50px;
+}
+.bottom-content-main li {
+    list-style: square;
+    margin-left: 21px;
+}
+.services-info-img {
+    padding-top:20px;
+    padding-bottom:225px;
+    margin-bottom:15px
+}
+footer {
+    text-align: center;
+}
